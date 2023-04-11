@@ -1,0 +1,21 @@
+{
+  "name": "nuxt-app",
+  "private": true,
+  "scripts": {
+    "build": "nuxt build",
+    "dev": "nuxt dev",
+    "generate": "nuxt generate",
+    "preview": "nuxt preview",
+    "postinstall": "nuxt prepare",
+    "lint": "eslint .",
+    "lint:fix": "eslint . --fix"
+  },
+  "devDependencies": {
+    "@flypeng/eslint-config": "0.0.11-beta.1",
+    "@nuxtjs/tailwindcss": "^6.6.5",
+    "@types/node": "^18.15.11",
+    "eslint": "^8.38.0",
+    "nuxt": "^3.3.3",
+    "typescript": "^5.0.4"
+  }
+}
