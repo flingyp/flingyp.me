@@ -14,6 +14,20 @@ module.exports = {
       xl: '1280px',
       '2xl': '1500px',
     },
-    extend: {},
+    extend: {
+      backgroundColor: {
+        light: '#f8f8f8',
+        dark: '#1c1f24',
+      },
+      animation: {
+        scale: 'scale 1s ease-in-out infinite',
+      },
+      keyframes: {
+        scale: {
+          '0%,100%': { transform: 'scale(1)' },
+          '50%': { transform: 'scale(1.05)' },
+        },
+      },
+    },
   },
 }

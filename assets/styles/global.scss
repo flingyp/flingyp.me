@@ -1,0 +1,7 @@
+html {
+  @apply bg-light text-black transition-all duration-300;
+}
+
+html.dark {
+  @apply bg-dark text-white;
+}

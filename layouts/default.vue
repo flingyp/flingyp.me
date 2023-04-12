@@ -2,7 +2,6 @@
   <div>
     <AppHeader />
     <slot />
+    <BaseBackground />
   </div>
 </template>
-
-<script setup lang="ts"></script>

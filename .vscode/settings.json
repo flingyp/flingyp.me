@@ -3,5 +3,14 @@
   "editor.formatOnSave": false,
   "editor.codeActionsOnSave": {
     "source.fixAll.eslint": true
-  }
+  },
+  "cSpell.words": [
+    "commitlint",
+    "flingyp",
+    "flypeng",
+    "nuxt",
+    "nuxtjs",
+    "tailwindcss"
+  ],
+  "typescript.tsdk": "node_modules\\typescript\\lib"
 }

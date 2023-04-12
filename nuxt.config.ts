@@ -2,6 +2,9 @@
 export default defineNuxtConfig({
   ssr: false,
   modules: [
+    'nuxt-icon',
+    '@vueuse/nuxt',
     '@nuxtjs/tailwindcss',
   ],
+  css: ['~/assets/styles/global.scss'],
 })
