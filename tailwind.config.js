@@ -16,7 +16,7 @@ module.exports = {
     },
     extend: {
       backgroundColor: {
-        light: '#f8f8f8',
+        light: '#fefefe',
         dark: '#1c1f24',
       },
       animation: {
