@@ -2,7 +2,7 @@
   <header
     class="
       flex items-center justify-between mb-2
-      px-6 py-4 shadow-sm text-base
+      px-6 py-4 shadow-sm text-lg
     "
   >
     <NuxtLink

@@ -5,6 +5,9 @@ module.exports = {
     './layouts/**/*',
     './components/**/*',
   ],
+  plugins: [
+    require('@tailwindcss/typography'),
+  ],
   darkMode: 'class',
   theme: {
     screens: {
@@ -16,8 +19,8 @@ module.exports = {
     },
     extend: {
       backgroundColor: {
-        light: '#fefefe',
-        dark: '#1c1f24',
+        light: '#ffffff',
+        dark: '#242424',
       },
       animation: {
         scale: 'scale 1s ease-in-out infinite',
