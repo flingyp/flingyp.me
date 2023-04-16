@@ -7,6 +7,7 @@ specifiers:
   '@tailwindcss/typography': ^0.5.9
   '@types/node': ^18.15.11
   '@vueuse/nuxt': ^9.13.0
+  dayjs: ^1.11.7
   eslint: ^8.38.0
   nuxt: ^3.3.3
   nuxt-icon: ^0.3.3
@@ -20,6 +21,7 @@ devDependencies:
   '@tailwindcss/typography': 0.5.9
   '@types/node': 18.15.11
   '@vueuse/nuxt': 9.13.0_nuxt@3.3.3
+  dayjs: 1.11.7
   eslint: 8.38.0
   nuxt: 3.3.3_zrtctp5ft4cbzfmbxkm43pdatq
   nuxt-icon: 0.3.3
@@ -2667,6 +2669,10 @@ packages:
   /data-uri-to-buffer/4.0.1:
     resolution: {integrity: sha512-0R9ikRb668HB7QDxT1vkpuUBtqc53YyAwMwGeUFKRojY/NWKvdZ+9UYtRfGmhqNbRkTSVpMbmyhXipFFv2cb/A==}
     engines: {node: '>= 12'}
+    dev: true
+
+  /dayjs/1.11.7:
+    resolution: {integrity: sha512-+Yw9U6YO5TQohxLcIkrXBeY73WP3ejHWVvx8XCk3gxvQDCTEmS48ZrSZCKciI7Bhl/uCMyxYtE9UqRILmFphkQ==}
     dev: true
 
   /debug/2.6.9:

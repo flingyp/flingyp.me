@@ -1,10 +1,9 @@
+<script setup lang="ts">
+const { isDark, toggle } = useTheme()
+</script>
+
 <template>
-  <header
-    class="
-      flex items-center justify-between mb-2
-      px-6 py-4 shadow-sm text-lg
-    "
-  >
+  <header class=" flex items-center justify-between mb-2 px-6 py-4 shadow-sm text-lg">
     <NuxtLink
       to="/"
       title="Home"
@@ -13,18 +12,14 @@
     </NuxtLink>
 
     <nav
-      class="
-        space-x-6 cursor-pointer
-      "
+      class="space-x-6 cursor-pointer"
     >
-      <Icon
-        name="carbon:blog"
-      />
+      <NuxtLink to="/posts">
+        <Icon name="carbon-notebook" />
+      </NuxtLink>
       <NuxtLink to="/project">
         <Icon name="carbon-delivery-parcel" />
       </NuxtLink>
-      <Icon name="carbon:bookmark" />
-      <Icon name="carbon-notebook" />
       <Icon name="carbon:logo-github" />
       <Icon
         v-show="isDark"
@@ -39,7 +34,3 @@
     </nav>
   </header>
 </template>
-
-<script setup lang="ts">
-const { isDark, toggle } = useTheme()
-</script>
