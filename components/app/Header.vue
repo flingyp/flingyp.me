@@ -1,9 +1,13 @@
 <script setup lang="ts">
 const { isDark, toggle } = useTheme()
 </script>
-
 <template>
-  <header class=" flex items-center justify-between mb-2 px-6 py-4 shadow-sm text-lg">
+  <header
+    class="
+    sticky top-0 flex items-center justify-between mb-2 px-6 py-4 shadow-sm text-lg
+    backdrop-filter backdrop-blur-lg
+  "
+  >
     <NuxtLink
       to="/"
       title="Home"
@@ -20,7 +24,12 @@ const { isDark, toggle } = useTheme()
       <NuxtLink to="/project">
         <Icon name="carbon-delivery-parcel" />
       </NuxtLink>
-      <Icon name="carbon:logo-github" />
+      <NuxtLink
+        to="https://github.com/flingyp"
+        target="_blank"
+      >
+        <Icon name="carbon:logo-github" />
+      </NuxtLink>
       <Icon
         v-show="isDark"
         name="carbon:light-filled"
