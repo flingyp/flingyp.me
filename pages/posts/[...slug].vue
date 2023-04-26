@@ -1,4 +1,30 @@
+<script setup lang="ts">
+import { Topic } from '~/types'
+
+const route = useRoute()
+const path = computed(() => route.path)
+
+const { post } = await usePost(path.value)
+
+const topicList = computed<Topic[]>(() => {
+  if (post.topic) return post.topic
+  return [{ id: '-1', depth: 0, text: 'Topic not found' }]
+})
+console.log(topicList.value)
+</script>
+
 <template>
+  <nav class="fixed right-1 p-4 rounded">
+    <ul class="flex flex-col space-y-0.5">
+      <li
+        v-for="(topic,index) in topicList"
+        :key="index"
+      >
+        <PostTopicLink :topic="topic" />
+      </li>
+    </ul>
+  </nav>
+
   <main
     class="prose prose-violet prose-neutral dark:prose-invert mt-[2%] mx-4 md:mx-auto
     prose-pre:bg-[#f6f5f4] dark:prose-pre:bg-[#1d1d1d]"

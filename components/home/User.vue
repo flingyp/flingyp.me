@@ -20,7 +20,7 @@
       <div class="flex items-center justify-center md:justify-between space-x-2 md:space-x-0 font-extralight">
         <div class="space-x-1 flex items-center">
           <Icon name="carbon:workspace" />
-          <span class="text-sm">KooBoo</span>
+          <span class="text-sm">Undefined</span>
         </div>
         <div class="space-x-1 flex items-center">
           <Icon name="carbon:location" />

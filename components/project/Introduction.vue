@@ -15,7 +15,7 @@ defineProps<ProjectIntroduction>()
         <Icon name="ri:git-repository-line" />
         <span class="text-base">{{ project.name }}</span>
       </div>
-      <span class="px-1 py-0.5 rounded-xl text-xs text-green-700 bg-green-100">Public</span>
+      <span class="px-1.5 py-0.5 rounded-xl text-xs text-green-700 bg-green-100">Public</span>
     </div>
     <span class="text-gray-600 dark:text-gray-400 text-xs">{{ project.description }}</span>
     <div class="text-xs dark:text-gray-200 flex items-center space-x-1">
