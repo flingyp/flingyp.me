@@ -1,4 +1,10 @@
-<script setup lang="ts"></script>
+<script setup lang="ts">
+useHead({ title: 'flingyp' })
+
+const { getGithubInfo } = useGithub()
+
+await getGithubInfo()
+</script>
 
 <template>
   <div class="md:w-4/5 mx-6 md:mx-auto mt-[8%] flex flex-col items-center">
