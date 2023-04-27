@@ -1,5 +1,10 @@
 <script setup lang="ts">
+import LightLogo from '~/assets/images/light_logo.png'
+import DarkLogo from '~/assets/images/dark_logo.png'
+
 const { isDark, toggle } = useTheme()
+
+const logoSrc = computed(() => (isDark.value ? DarkLogo : LightLogo))
 </script>
 <template>
   <header
@@ -12,7 +17,11 @@ const { isDark, toggle } = useTheme()
       to="/"
       title="Home"
     >
-      LOGO
+      <img
+        alt="Logo"
+        :src="logoSrc"
+        class="w-20 object-cover"
+      >
     </NuxtLink>
 
     <nav

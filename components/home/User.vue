@@ -4,7 +4,7 @@ const { info } = useGithub()
 
 <template>
   <div class="flex flex-col md:flex-row md:items-center space-x-0 md:space-x-4">
-    <div class="w-32 h-32 md:w-36 md:h-36 self-center">
+    <div class="w-28 md:w-32 self-center object-cover">
       <img
         :src="info?.avatar"
         alt="User Avatar"
