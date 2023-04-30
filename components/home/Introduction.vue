@@ -79,23 +79,25 @@
     <div class="space-y-4">
       <span class="font-semibold text-lg">Introduction</span>
       <p class="text-sm">
-        🥳 This is a home of <NuxtLink
+        🥳 This is a website of
+        <NuxtLink
           to="https://github.com/flingyp"
           target="_blank"
           class="font-semibold"
         >
           flingyp
-        </NuxtLink> to record technology, growth and life.
+        </NuxtLink> for recording technology, growth, and life.
 
-        🥰 All inspired by
+        <!-- <br> -->
+
+        🥰 All the ideas come from
         <NuxtLink
           to="https://github.com/zyyv"
           target="_blank"
           class="font-semibold"
         >
           Chris
-        </NuxtLink>
-        and I really like UI of his website so I developed my website based on his.
+        </NuxtLink> and I really like its website style. So I developed it based on its website.
       </p>
     </div>
   </div>
