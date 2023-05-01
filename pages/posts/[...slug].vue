@@ -4,17 +4,18 @@ import { Topic } from '~/types'
 const route = useRoute()
 const path = computed(() => route.path)
 
-const { post } = await usePost(path.value)
+const { post, getPostDetail } = usePost()
+
+getPostDetail(path.value)
 
 const topicList = computed<Topic[]>(() => {
   if (post.topic) return post.topic
   return [{ id: '-1', depth: 0, text: 'Topic not found' }]
 })
-console.log(topicList.value)
 </script>
 
 <template>
-  <nav class="fixed right-1 p-4 rounded">
+  <nav class="fixed right-1 p-4 rounded hidden md:block">
     <ul class="flex flex-col space-y-0.5">
       <li
         v-for="(topic,index) in topicList"

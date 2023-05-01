@@ -1,9 +1,8 @@
 <script setup lang="ts">
-const { postList, getPostList } = usePostList()
+// const { postList, getPostList } = usePostList()
+const { postList, getPostList } = usePost()
 
-onMounted(async () => {
-  await getPostList()
-})
+await getPostList()
 </script>
 
 <template>
