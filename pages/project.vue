@@ -16,7 +16,7 @@ await getGithubRepos()
       Personal related open source projects list
     </p>
 
-    <div class="space-y-4">
+    <div class="space-y-8">
       <div
         v-for="(item, index) in repoCollection"
         :key="index"
