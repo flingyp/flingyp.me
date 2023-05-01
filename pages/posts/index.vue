@@ -1,7 +1,7 @@
 <script setup lang="ts">
-// const { postList, getPostList } = usePostList()
-const { postList, getPostList } = usePost()
+useHead({ title: 'Post | flingyp' })
 
+const { postList, getPostList } = usePost()
 await getPostList()
 </script>
 

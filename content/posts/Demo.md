@@ -1,13 +1,9 @@
 ---
 id: 501
-title: 'Hello World Test ✨'
-description: 'Hello World Test'
+title: Demo ✨
+description: This is a demo post.
 createTime: 2022-11-11T07:43:45.683Z
 ---
-
-<!-- 
-:ArticleToc
-:ArticleHeader -->
 
 ## Link
 
@@ -27,12 +23,30 @@ export const useTheme = () => {
 ```
 
 ```ts
+// https://nuxt.com/docs/api/configuration/nuxt-config
+
 export default defineNuxtConfig({
+  modules: [
+    'nuxt-icon',
+    '@vueuse/nuxt',
+    '@nuxt/content',
+    '@nuxtjs/tailwindcss',
+  ],
+  css: ['~/assets/styles/global.scss'],
   content: {
     highlight: {
-      // Theme used in all color schemes.
-      theme: 'github-light',
+      theme: {
+        default: 'vitesse-light',
+        dark: 'vitesse-dark',
+      },
     },
+    markdown: {
+      toc: {
+        depth: 3,
+      },
+      anchorLinks: true,
+    },
+    documentDriven: true,
   },
 })
 ```

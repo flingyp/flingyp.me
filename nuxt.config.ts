@@ -11,8 +11,8 @@ export default defineNuxtConfig({
   content: {
     highlight: {
       theme: {
-        default: 'github-light',
-        dark: 'github-dark-dimmed',
+        default: 'vitesse-light',
+        dark: 'vitesse-dark',
       },
     },
     markdown: {
