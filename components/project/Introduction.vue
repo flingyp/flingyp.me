@@ -1,8 +1,8 @@
 <script setup lang="ts">
-import { Project } from '~/types'
+import { GithubRepo } from '~/types'
 
 interface ProjectIntroduction {
-  project: Project
+  project: GithubRepo
 }
 
 defineProps<ProjectIntroduction>()

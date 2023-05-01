@@ -1,6 +1,6 @@
 <template>
   <AppHeader />
-  <main>
+  <main class="pb-16">
     <slot />
   </main>
   <BaseBackground />

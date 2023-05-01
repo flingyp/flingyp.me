@@ -1,4 +1,5 @@
 <script setup lang="ts">
+import { useRandomString } from '@flypeng/tool/browser'
 import LightLogo from '~/assets/images/light_logo.png'
 import DarkLogo from '~/assets/images/dark_logo.png'
 
@@ -17,9 +18,11 @@ const logoSrc = computed(() => (isDark.value ? DarkLogo : LightLogo))
       to="/"
       title="Home"
     >
+      <!-- fix: solve image cache question -->
       <img
         alt="Logo"
-        :src="logoSrc"
+
+        :src="`${logoSrc}?tempid=${useRandomString()}`"
         class="w-20 object-cover"
       >
     </NuxtLink>

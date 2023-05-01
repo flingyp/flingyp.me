@@ -1,4 +1,4 @@
-import { GithubInfo } from '~/types'
+import { GithubInfo, GithubRepo } from '~/types'
 
 export const convertGithubInfo = (data: any) => {
   const info: GithubInfo = {
@@ -14,4 +14,18 @@ export const convertGithubInfo = (data: any) => {
   }
 
   return info
+}
+
+export const convertGithubRepo = (data: any) => {
+  const repoList: GithubRepo[] = data.map((item: any) => ({
+    id: item.id,
+    url: item.html_url,
+    name: item.name,
+    description: item.description || 'Undefined',
+    language: item.language || 'Undefined',
+    visibility: item.visibility || 'Private',
+    topics: item.topics || [],
+  }))
+
+  return repoList
 }
