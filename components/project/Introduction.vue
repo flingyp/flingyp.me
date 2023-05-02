@@ -35,7 +35,10 @@ defineProps<ProjectIntroduction>()
       "
     >{{ project.description }}</span>
     <div class="text-xs dark:text-gray-200 flex items-center space-x-1">
-      <p class="w-2 h-2 rounded-full bg-blue-400" />
+      <p
+        :style="{ backgroundColor: project.languageColor }"
+        class="w-2 h-2 rounded-full"
+      />
       <span>{{ project.language }}</span>
     </div>
   </div>
@@ -45,7 +48,7 @@ defineProps<ProjectIntroduction>()
   .text-ellipsis {
     overflow: hidden;
     display: -webkit-box;
-    -webkit-line-clamp: 2;
+    -webkit-line-clamp: 1;
     -webkit-box-orient: vertical;
   }
 </style>

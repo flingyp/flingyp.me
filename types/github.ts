@@ -15,12 +15,13 @@ export interface GithubRepo {
   url: string
   name: string
   description?: string
-  language?: string
+  language: string
+  languageColor?: string
   visibility?: string
   topics?: string[]
 }
 
-export type GithubreposCollection = {
+export type GithubReposCollection = {
   name: string
   collection?: GithubRepo[]
 }

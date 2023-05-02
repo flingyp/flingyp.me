@@ -1,8 +1,14 @@
-import { GithubInfo, GithubRepo, GithubreposCollection } from '~/types'
+import { GithubInfo, GithubRepo, GithubReposCollection } from '~/types'
 import { convertGithubInfo, convertGithubRepo } from './convert/github'
 
 const info = ref<GithubInfo>()
 const repoList = ref<GithubRepo[]>([])
+
+const LANGUAGE_COLOR_LIST = new Map([
+  ['JavaScript', '#f1e05a'],
+  ['TypeScript', '#3178c6'],
+  ['Vue', '#41b883'],
+])
 
 export const useGithub = () => {
   const getGithubInfo = async () => {
@@ -27,8 +33,8 @@ export const useGithub = () => {
     Promise.all([getRepoList(curPage), getRepoList(++curPage)])
   }
 
-  const reposCollection = computed<GithubreposCollection[]>(() => {
-    const collectionList: GithubreposCollection[] = [
+  const reposCollection = computed<GithubReposCollection[]>(() => {
+    let collectionList: GithubReposCollection[] = [
       {
         name: 'Templates',
         collection: [],
@@ -41,6 +47,10 @@ export const useGithub = () => {
         name: 'Plugins',
         collection: [],
       },
+      {
+        name: 'Tools',
+        collection: [],
+      },
     ]
     collectionList.forEach((collection) => {
       if (collection.name === 'Templates') {
@@ -49,7 +59,15 @@ export const useGithub = () => {
         collection.collection = repoList.value.filter((item) => item.topics?.includes('config'))
       } else if (collection.name === 'Plugins') {
         collection.collection = repoList.value.filter((item) => item.topics?.includes('plugin'))
+      } else if (collection.name === 'Tools') {
+        collection.collection = repoList.value.filter((item) => item.topics?.includes('tool'))
       }
+    })
+    collectionList = collectionList.map((collection) => {
+      collection.collection?.forEach((item) => {
+        item.languageColor = LANGUAGE_COLOR_LIST.get(item.language) || '#41b883'
+      })
+      return collection
     })
     return collectionList
   })
