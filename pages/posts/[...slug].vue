@@ -5,8 +5,7 @@ const route = useRoute()
 const path = computed(() => route.path)
 
 const { post, getPostDetail } = usePost()
-
-getPostDetail(path.value)
+await getPostDetail(path.value)
 
 const topicList = computed<Topic[]>(() => {
   if (post.topic) return post.topic

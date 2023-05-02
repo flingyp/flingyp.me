@@ -2,7 +2,6 @@
 useHead({ title: 'flingyp' })
 
 const { getGithubInfo } = useGithub()
-
 await getGithubInfo()
 </script>
 

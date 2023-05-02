@@ -3,10 +3,10 @@ import { ParsedContent } from '@nuxt/content/dist/runtime/types'
 import { Post } from '~/types'
 import { convertPost } from './convert/post'
 
-const postContentList = ref<ParsedContent[]>()
 const post = reactive<Post>({
   id: -1,
 })
+const postContentList = ref<ParsedContent[]>()
 
 export const usePost = () => {
   const postList = computed(() => postContentList.value?.map<Post>((item) => ({

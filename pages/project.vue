@@ -1,7 +1,7 @@
 <script setup lang="ts">
 useHead({ title: 'Project | flingyp' })
 
-const { repoCollection, getGithubRepos } = useGithub()
+const { reposCollection, getGithubRepos } = useGithub()
 await getGithubRepos()
 </script>
 
@@ -17,7 +17,7 @@ await getGithubRepos()
 
     <div class="space-y-8">
       <div
-        v-for="(item, index) in repoCollection"
+        v-for="(item, index) in reposCollection"
         :key="index"
       >
         <h3 class="mb-2">
