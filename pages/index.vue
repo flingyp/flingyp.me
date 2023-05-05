@@ -1,8 +1,5 @@
 <script setup lang="ts">
 useHead({ title: 'flingyp' })
-
-const { getGithubInfo } = useGithub()
-await getGithubInfo()
 </script>
 
 <template>

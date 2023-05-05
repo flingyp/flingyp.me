@@ -1,8 +1,7 @@
 <script setup lang="ts">
 useHead({ title: 'Project | flingyp' })
 
-const { reposCollection, getGithubRepos } = useGithub()
-await getGithubRepos()
+const { reposCollection } = useGithub()
 </script>
 
 <template>
