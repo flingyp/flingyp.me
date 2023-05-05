@@ -1,9 +1,6 @@
 import { GithubInfo, GithubRepo, GithubReposCollection } from '~/types'
 import { convertGithubInfo, convertGithubRepo } from './convert/github'
 
-const info = ref<GithubInfo>()
-const repoList = ref<GithubRepo[]>([])
-
 const LANGUAGE_COLOR_LIST = new Map([
   ['JavaScript', '#f1e05a'],
   ['TypeScript', '#3178c6'],
@@ -11,6 +8,9 @@ const LANGUAGE_COLOR_LIST = new Map([
 ])
 
 export const useGithub = () => {
+  const info = ref<GithubInfo>()
+  const repoList = ref<GithubRepo[]>([])
+
   const getGithubInfo = async () => {
     const response = await useFetch('https://api.github.com/users/flingyp', { method: 'GET' })
     if (response.data.value) {
