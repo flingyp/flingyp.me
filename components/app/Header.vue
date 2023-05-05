@@ -1,11 +1,5 @@
 <script setup lang="ts">
-import { useRandomString } from '@flypeng/tool/browser'
-import LightLogo from '~/assets/images/light_logo.png'
-import DarkLogo from '~/assets/images/dark_logo.png'
-
 const { isDark, toggle } = useTheme()
-
-const logoSrc = computed(() => (isDark.value ? DarkLogo : LightLogo))
 </script>
 <template>
   <header
@@ -18,12 +12,18 @@ const logoSrc = computed(() => (isDark.value ? DarkLogo : LightLogo))
       to="/"
       title="Home"
     >
-      <!-- fix: solve image cache question -->
       <img
-        alt="Logo"
-
-        :src="`${logoSrc}?tempid=${useRandomString()}`"
+        v-if="!isDark"
+        alt="flingyp"
         class="w-20 object-cover"
+        src="~/assets/images/light_logo.png"
+      >
+
+      <img
+        v-else
+        alt="flingyp"
+        class="w-20 object-cover"
+        src="~/assets/images/dark_logo.png"
       >
     </NuxtLink>
 
