@@ -12,6 +12,7 @@
   },
   "devDependencies": {
     "@flypeng/eslint-config": "0.0.11",
+    "@flypeng/tool": "^5.3.0",
     "@nuxt/content": "^2.5.2",
     "@nuxtjs/tailwindcss": "^6.6.5",
     "@tailwindcss/typography": "^0.5.9",
@@ -25,8 +26,9 @@
     "nuxt": "^3.3.3",
     "nuxt-icon": "^0.3.3",
     "sass": "^1.62.0",
+    "tippy.js": "^6.3.7",
     "typescript": "^5.0.4",
-    "@flypeng/tool": "^5.3.0"
+    "vue3-calendar-heatmap": "^2.0.5"
   },
   "pnpm": {
     "overrides": {

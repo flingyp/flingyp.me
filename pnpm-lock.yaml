@@ -19,7 +19,9 @@ specifiers:
   nuxt: ^3.3.3
   nuxt-icon: ^0.3.3
   sass: ^1.62.0
+  tippy.js: ^6.3.7
   typescript: ^5.0.4
+  vue3-calendar-heatmap: ^2.0.5
 
 devDependencies:
   '@flypeng/eslint-config': 0.0.11_voubu7prgxjfsfbgx5d4sqnwiy
@@ -37,7 +39,9 @@ devDependencies:
   nuxt: 3.3.3_zrtctp5ft4cbzfmbxkm43pdatq
   nuxt-icon: 0.3.3
   sass: 1.62.0
+  tippy.js: 6.3.7
   typescript: 5.0.4
+  vue3-calendar-heatmap: 2.0.5_tippy.js@6.3.7
 
 packages:
 
@@ -1164,6 +1168,10 @@ packages:
       - supports-color
       - ts-node
       - webpack
+    dev: true
+
+  /@popperjs/core/2.11.7:
+    resolution: {integrity: sha512-Cr4OjIkipTtcXKjAsm8agyleBuDHvxzeBoa1v543lbv1YaIwQjESsVcmjiWiPEbC1FIeHOG/Op9kdCmAmiS3Kw==}
     dev: true
 
   /@rollup/plugin-alias/5.0.0_rollup@3.20.2:
@@ -8187,6 +8195,12 @@ packages:
     resolution: {integrity: sha512-AD5ih2NlSssTCwsMznbvwMZpJ1cbhkGd2uueNxzv2jDlEeZdU04JQfRnggJQ8DrcVBGjAsCKwFBbDlVNtEMlzw==}
     dev: true
 
+  /tippy.js/6.3.7:
+    resolution: {integrity: sha512-E1d3oP2emgJ9dRQZdf3Kkn0qJgI6ZLpyS5z6ZkY1DF3kaQaBsGZsndEpHwx+eC+tYM41HaSNvNtLx8tU57FzTQ==}
+    dependencies:
+      '@popperjs/core': 2.11.7
+    dev: true
+
   /tmp/0.0.33:
     resolution: {integrity: sha512-jRCJlojKnZ3addtTOjdIqoRuPEKBvNXcGYqzO6zWZX8KfKEpnGY5jfggJQ3EjKuu8D4bJRr0y+cYJFmYbImXGw==}
     engines: {node: '>=0.6.0'}
@@ -8820,6 +8834,16 @@ packages:
       '@vue/runtime-dom': 3.2.47
       '@vue/server-renderer': 3.2.47_vue@3.2.47
       '@vue/shared': 3.2.47
+    dev: true
+
+  /vue3-calendar-heatmap/2.0.5_tippy.js@6.3.7:
+    resolution: {integrity: sha512-qvveNQlTS5Aw7AvRLs0zOyu3uP5iGJlXJAnkrkG2ElDdyQ8H1TJhQ8rL702CROjAg16ezIveUY10nCO7lqZ25w==}
+    engines: {node: '>=16'}
+    peerDependencies:
+      tippy.js: ^6.3.7
+      vue: ^3.2.29
+    dependencies:
+      tippy.js: 6.3.7
     dev: true
 
   /wcwidth/1.0.1:
