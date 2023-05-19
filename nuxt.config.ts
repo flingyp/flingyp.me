@@ -24,9 +24,9 @@ export default defineNuxtConfig({
         {
           name: 'keywords',
           content: 'flingyp, flingyp.me, website, nuxt3',
-        }, 
+        },
       ],
-    }
+    },
   },
   content: {
     highlight: {
