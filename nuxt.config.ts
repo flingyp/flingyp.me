@@ -1,7 +1,7 @@
 // https://nuxt.com/docs/api/configuration/nuxt-config
 
 export default defineNuxtConfig({
-  ssr: false,
+  ssr: true,
   modules: [
     'nuxt-icon',
     '@vueuse/nuxt',
@@ -9,6 +9,25 @@ export default defineNuxtConfig({
     '@nuxtjs/tailwindcss',
   ],
   css: ['~/assets/styles/global.scss'],
+  app: {
+    head: {
+      viewport: 'width=device-width, initial-scale=1',
+      meta: [
+        {
+          name: 'author',
+          content: 'flingyp',
+        },
+        {
+          name: 'description',
+          content: 'This is a website of flingyp for recording technology, growth, and life.',
+        },
+        {
+          name: 'keywords',
+          content: 'flingyp, flingyp.me, website, nuxt3',
+        }, 
+      ],
+    }
+  },
   content: {
     highlight: {
       theme: {
