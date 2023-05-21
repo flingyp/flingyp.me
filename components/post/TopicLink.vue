@@ -9,7 +9,7 @@ defineProps<TopicLink>()
 </script>
 
 <template>
-  <li>
+  <div>
     <NuxtLink
       :to="`#${topic.id}`"
       class="text-sm text-gray-500 hover:text-gray-900 dark:hover:text-gray-200"
@@ -19,12 +19,12 @@ defineProps<TopicLink>()
 
     <div v-if="topic.children">
       <ul class="pl-6">
-        <TopicLink
+        <PostTopicLink
           v-for="(child,index) in topic.children"
           :key="index"
           :topic="child"
         />
       </ul>
     </div>
-  </li>
+  </div>
 </template>
