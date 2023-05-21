@@ -14,7 +14,7 @@ const topicList = computed<Topic[]>(() => {
 </script>
 
 <template>
-  <nav class="fixed right-1 p-4 rounded hidden md:block">
+  <nav class="fixed right-1 p-4 rounded hidden lg:block">
     <ul class="flex flex-col space-y-0.5">
       <li
         v-for="(topic,index) in topicList"
@@ -26,7 +26,7 @@ const topicList = computed<Topic[]>(() => {
   </nav>
 
   <main
-    class="prose prose-violet prose-neutral dark:prose-invert mt-4 md:mt-8 mx-4 md:mx-auto
+    class="prose prose-violet prose-neutral dark:prose-invert max-w-max lg:max-w-prose mt-4 md:mt-8 mx-8 lg:mx-auto
     prose-pre:bg-[#fafafa] dark:prose-pre:bg-[#18181a] prose-h1:mb-4 prose-h1:text-3xl"
   >
     <ContentDoc />
