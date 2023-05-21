@@ -21,7 +21,7 @@ defineProps<PostIntroduction>()
           {{ post.title }}
         </h2>
       </NuxtLink>
-      <p class="">
+      <p class="text-sm my-0.5">
         {{ post.description }}
       </p>
       <p class="text-sm text-gray-700 dark:text-gray-300">
