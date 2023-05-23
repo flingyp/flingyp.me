@@ -10,6 +10,7 @@ export interface Post {
   title?: string
   description?: string
   createTime?: string
+  updateTime?: string
   path?: string
   topic?: Topic[]
 }

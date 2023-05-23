@@ -1,16 +1,13 @@
 <script setup lang="ts">
-import dayjs from 'dayjs'
-import relativeTimePlugin from 'dayjs/plugin/relativeTime'
-
 import { Post } from '~/types'
-
-dayjs.extend(relativeTimePlugin)
 
 interface PostIntroduction {
   post: Post
 }
 
 defineProps<PostIntroduction>()
+
+const { dayjs } = useDayjs()
 </script>
 
 <template>
@@ -25,7 +22,9 @@ defineProps<PostIntroduction>()
         {{ post.description }}
       </p>
       <p class="text-sm text-gray-700 dark:text-gray-300">
-        {{ dayjs(post.createTime).fromNow() }}
+        创建：{{ dayjs(post.createTime).fromNow() }}
+        👣
+        更新：{{ dayjs(post.updateTime).fromNow() }}
       </p>
     </div>
   </div>

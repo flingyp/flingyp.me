@@ -14,6 +14,7 @@ export const usePost = () => {
     title: item.title || '',
     description: item.description,
     createTime: item.createTime,
+    updateTime: item.updateTime,
     // eslint-disable-next-line no-underscore-dangle
     path: item._path || '/',
   })))
