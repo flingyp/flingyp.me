@@ -3,6 +3,9 @@
     "rules": {
         "no-undef": "off",
         "global-require": "off",
-        "@typescript-eslint/no-explicit-any": "off"
+        "@typescript-eslint/no-explicit-any": "off",
+        "no-labels": "off", 
+        "no-restricted-syntax": "off", 
+        "no-unused-labels": "off" 
     }
 }
