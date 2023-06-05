@@ -12,8 +12,8 @@ await getPostList()
       class="space-y-8"
     >
       <PostIntroduction
-        v-for="post in postList"
-        :key="post.id"
+        v-for="(post, index) in postList"
+        :key="index"
         :post="post"
       />
     </div>
