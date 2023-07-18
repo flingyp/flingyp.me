@@ -45,12 +45,12 @@ const { isDark, toggle } = useTheme()
       <Icon
         v-show="isDark"
         name="carbon:light-filled"
-        @click="toggle(false)"
+        @click="toggle"
       />
       <Icon
         v-show="!isDark"
         name="akar-icons:moon-fill"
-        @click="toggle(true)"
+        @click="toggle"
       />
     </nav>
   </header>
