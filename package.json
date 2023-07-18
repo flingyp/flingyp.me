@@ -28,9 +28,14 @@
     "sass": "^1.62.0",
     "typescript": "^5.0.4"
   },
+  "overrides": {
+    "unenv": {
+      "consola": "3.2.3"
+    }
+  },
   "pnpm": {
     "overrides": {
-      "consola": "3.0.1"
+      "consola": "3.2.3"
     }
   }
 }
