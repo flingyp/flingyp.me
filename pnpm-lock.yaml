@@ -1,7 +1,7 @@
 lockfileVersion: '6.0'
 
 overrides:
-  consola: 3.2.3
+  consola: ~3.2.3
 
 devDependencies:
   '@flypeng/eslint-config':
