@@ -1,6 +1,6 @@
 ---
 title: 😺 CSS中 100% 和 Auto 的区别对比
-description: This is a demo post.
+description: CSS 中 Width、Height 的 100% 和 Auto 的区别对比
 createTime: 2023-07-25 09:57
 updateTime: 2023-07-25 09:57
 ---
