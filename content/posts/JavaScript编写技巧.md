@@ -89,7 +89,3 @@ const keyList = {
 const key = 1
 keyList[key] ? keyList[key]() : otherKey()
 ```
-
-
-
-
