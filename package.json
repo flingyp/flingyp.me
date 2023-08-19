@@ -13,20 +13,21 @@
   "devDependencies": {
     "@flypeng/eslint-config": "^0.0.12",
     "@flypeng/tool": "^5.3.1",
-    "@nuxt/content": "^2.5.2",
-    "@nuxtjs/tailwindcss": "^6.6.5",
+    "@hypernym/nuxt-gsap": "^2.2.2",
+    "@nuxt/content": "^2.7.2",
+    "@nuxtjs/tailwindcss": "^6.8.0",
     "@tailwindcss/typography": "^0.5.9",
     "@types/d3": "^7.4.0",
-    "@types/node": "^18.15.11",
+    "@types/node": "^18.17.6",
     "@vueuse/nuxt": "^9.13.0",
-    "d3": "^7.8.4",
-    "dayjs": "^1.11.7",
-    "eslint": "^8.38.0",
+    "d3": "^7.8.5",
+    "dayjs": "^1.11.9",
+    "eslint": "^8.47.0",
     "moment": "^2.29.4",
-    "nuxt": "^3.3.3",
+    "nuxt": "^3.6.5",
     "nuxt-icon": "^0.3.3",
-    "sass": "^1.62.0",
-    "typescript": "^5.0.4"
+    "sass": "^1.66.1",
+    "typescript": "^5.1.6"
   },
   "overrides": {
     "unenv": {

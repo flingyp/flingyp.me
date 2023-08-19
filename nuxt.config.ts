@@ -7,6 +7,7 @@ export default defineNuxtConfig({
     '@vueuse/nuxt',
     '@nuxt/content',
     '@nuxtjs/tailwindcss',
+    '@hypernym/nuxt-gsap',
   ],
   css: ['~/assets/styles/global.scss'],
   app: {
