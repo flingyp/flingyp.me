@@ -1,5 +1,13 @@
 <script setup lang="ts">
 const { info } = useGithub()
+const { $gsap } = useNuxtApp()
+
+onMounted(() => {
+  const tl = $gsap.timeline()
+  tl.to('.user-avatar', {
+    scale: 1.05, duration: 1, yoyo: true, repeat: -1,
+  })
+})
 </script>
 
 <template>
@@ -8,12 +16,12 @@ const { info } = useGithub()
       <img
         :src="info?.avatar"
         alt="User Avatar"
-        class="w-full h-full rounded-full object-cover"
+        class="user-avatar w-full h-full rounded-full object-cover"
       >
     </div>
 
     <div class="flex flex-col">
-      <h2 class="text-3xl font-semibold capitalize opacity-80 text-center md:text-start mt-4 md:mt-0">
+      <h2 class="user-name text-3xl font-semibold capitalize opacity-80 text-center md:text-start mt-4 md:mt-0">
         {{ info?.name }}
       </h2>
       <p class="my-2 font-extralight text-center md:text-start">
