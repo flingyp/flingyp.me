@@ -4,7 +4,7 @@ import { useDebounce } from '@flypeng/tool/browser'
 useHead({ title: 'Post | flingyp' })
 
 const curPage = ref(1)
-const curSize = ref(5)
+const curSize = ref(10)
 const postTotal = ref(0)
 const { postList, getPostList } = usePost()
 const { postListTotal } = await getPostList(curPage, curSize)
