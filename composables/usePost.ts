@@ -19,8 +19,17 @@ export const usePost = () => {
     path: item._path || '/',
   })))
 
-  const getPostList = async () => {
-    postContentList.value = await queryContent('/').find()
+  const getPostList = async (page: Ref<number>, size: Ref<number>) => {
+    const fetchPostList = await queryContent().skip((page.value - 1) * size.value).limit(size.value).find()
+    // const postListTotal = await queryContent().count()
+    // TODO: 临时写死，count() API @nuxt/content 还没有发布到最新版本中
+    // https://content.nuxtjs.org/api/composables/query-content#count
+    const postListTotal = 20
+    postContentList.value = postContentList.value?.length ? [...postContentList.value, ...fetchPostList] : fetchPostList
+    return {
+      fetchPostList,
+      postListTotal,
+    }
   }
 
   const getPostDetail = async (_path: string) => {
