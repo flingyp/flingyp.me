@@ -13,14 +13,14 @@ const { isDark, toggle } = useTheme()
       title="Home"
     >
       <img
-        v-if="!isDark"
+        v-show="!isDark"
         alt="flingyp"
         class="w-20 object-cover"
         src="~/assets/images/light_logo.png"
       >
 
       <img
-        v-else
+        v-show="isDark"
         alt="flingyp"
         class="w-20 object-cover"
         src="~/assets/images/dark_logo.png"
