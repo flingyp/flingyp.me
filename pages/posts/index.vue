@@ -28,6 +28,9 @@ onMounted(() => {
   window.addEventListener('scroll', documentScroll)
 })
 
+onUnmounted(() => {
+  window.removeEventListener('scroll', documentScroll)
+})
 </script>
 
 <template>
