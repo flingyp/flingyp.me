@@ -27,7 +27,8 @@
     "nuxt": "^3.3.3",
     "nuxt-icon": "^0.3.3",
     "sass": "^1.62.0",
-    "typescript": "^5.0.4"
+    "typescript": "^5.0.4",
+    "@vite-pwa/nuxt": "^0.1.0"
   },
   "overrides": {
     "unenv": {
@@ -36,7 +37,8 @@
   },
   "pnpm": {
     "overrides": {
-      "consola": "~3.2.3"
+      "consola": "~3.2.3",
+      "micromark": "3.2.0"
     }
   }
 }
